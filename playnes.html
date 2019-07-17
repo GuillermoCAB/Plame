@@ -1,0 +1,157 @@
+<html lang="br">
+    <head>        
+        <title>Plame Games Online | Welcome</title>
+        <link rel='stylesheet' href='./css/main.css'>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width'>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name='author' content='Guillermo Benitez'>
+        <meta name='keywords' content='games, game online, snes emulator, snes online'>
+        <meta name='description' content='Model website to learn about HTML, CSS, Javascript and C++'>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <div id='logo'>
+                    <img src='./img/logo.png'>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href='index.html'>Home</a></li>
+                        <li class='current'><a href='play.html'>Jogar</a></li>
+                        <li><a href='about.html'>Sobre</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+        <section id='boxes'>
+            <div class='container'>
+
+                <h2>Escolha que game você quer jogar.</h2>
+                <div class="container2">
+
+                <div class='search-box'>
+                    <input type='text' class='search-txt' id='inputFiltro' placeholder='Digite o nome do jogo...'>
+                    <a href="#" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </div>
+
+                </div>
+
+                <ul id='listaJogos'>
+                <div class='boxj'>
+                    <li class="itemJogo">
+                        <a href='playnes-super-mario.html'>
+                            
+                                <img src='./img/supermario.jpg' href='#'>
+                                <div class="containerInfoJogos">
+                                <h3>Super Mario</h3>
+                                <div class="infoGame">                         
+                                    <h4>Ano: 1985</h4>
+                                    <h4>Avaliação: 4.7</h4> 
+                                    <h4>Paltaforma: NES</h4>
+                                    <h4>Genêro: Plataforma</h4>  
+                                </div>
+                                <div class="infoGamePlayer">                                    
+                                    <h4>Último acesso: 28/03/2019</h4>
+                                    <h4>Progresso: 15%</h4>
+                                    <h4>Troféus: 0</h4>
+                                    <h4>Ranking Geral: 2.310º</h4>
+                                    <h4>Pontuação: 22.756</h4> 
+                                </div>  
+                                </div>                 
+                            
+                        </a>
+                    </li>
+                </div>
+
+                    <li class="itemJogo">
+                            <a href='playnes-castlevania.html'>
+                                <div class='boxj'>
+                                    <img src='./img/castlevania.png' href='#'>
+                                    <div class="containerInfoJogos">
+                                    <h3>Castlevania</h3>
+                                    <div class="infoGame">                         
+                                        <h4>Ano: 1986</h4>
+                                        <h4>Avaliação: 4.5</h4> 
+                                        <h4>Paltaforma: NES</h4>
+                                        <h4>Genêro: Plataforma</h4>  
+                                    </div>
+                                    <div class="infoGamePlayer">                                    
+                                        <h4>Último acesso: 15/02/2019</h4>
+                                        <h4>Progresso: 56%</h4>
+                                        <h4>Troféus: 2</h4>
+                                        <h4>Ranking Geral: 534º</h4>
+                                        <h4>Pontuação: 561.208</h4>   
+                                    </div>
+                                </div>                 
+                                </div>
+                            </a>
+                        </li>
+
+                    
+                
+                </ul>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>Guillermo Benitez, Copyright &copy; 2019.</p>
+        </footer>
+
+        <script>
+              //* Pegando o Filtro
+              let inputFiltro = document.getElementById("inputFiltro");
+
+              //* Listener do filtro
+              inputFiltro.addEventListener('keyup', filterJogos)    
+              
+              function filterJogos () {
+                  //* Pegano Valor do Filtro
+                  let valorFiltro = document.getElementById("inputFiltro").value.toUpperCase();
+                  
+                  //*Pegando nome ul
+                  let ul = document.getElementById("listaJogos")
+
+                  //*Pegando items li
+                  let li = ul.querySelectorAll('li.itemJogo')
+
+                  //*Pegando Box
+                  let boxj = ul.getElementsByClassName('boxj')
+
+                  //*Loop pelo array li
+                  for(let i = 0; i < li.length; i++){
+                      let a = li[i].getElementsByTagName('h3')[0];
+                      // Verificacao do filtro no li
+                      if(a.innerHTML.toUpperCase().indexOf(valorFiltro) > -1){
+                          li[i].style.display = ''; 
+                          boxj[i].style.border = '2px solid #e8491d';                         
+                     } else{
+                        li[i].style.display = 'none';
+                        boxj[i].style.border = 'none';
+                      }
+                  }
+                  
+
+
+
+              }
+        </script>
+
+
+
+
+    </body>
+
+
+
+
+
+
+</html>

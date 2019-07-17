@@ -1,0 +1,135 @@
+<html lang="br">
+    <head>        
+        <title>Plame Games Online | Welcome</title>
+        <link rel='stylesheet' href='./css/main.css'>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width'>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name='author' content='Guillermo Benitez'>
+        <meta name='keywords' content='games, game online, snes emulator, snes online'>
+        <meta name='description' content='Model website to learn about HTML, CSS, Javascript and C++'>
+        <link rel="import" href=".\x-nes\dist\x-nes.html">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <div id='logo'>
+                    <img src='./img/logo.png'>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href='index.html'>Home</a></li>
+                        <li class='current'><a href='play.html'>Jogar</a></li>
+                        <li><a href='about.html'>Sobre</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+        <section id='boxes'>
+            <div class='container'>
+
+                <h2>Aguarde enquanto o jogo  é carregado.</h2>
+                <div class='container'>
+                        
+
+                    <div>
+                        <div id="emulator">
+                            <p>Para jogar baixe e instale a versão mais recente do Flash no link abaixo. Caso já tenha feito isso verifique se você habilitou o uso do Flash nessa página nas configurações do seu navegador.</p>
+                            <br>
+                            <a href="http://www.adobe.com/go/getflashplayer">
+                                <img src="//www.adobe.com/images/shared/download_buttons/get_adobe_flash_player.png" alt="Get Adobe Flash player"/>
+                            </a>
+                        </div>
+                    </div>
+
+                    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+                    <script src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+                    <script type="text/javascript">
+                    	var resizeOwnEmulator = function(width, height)	{
+                                    var emulator = $('#emulator');
+                                    emulator.css('width', width);
+                                    emulator.css('height', height);
+                                    }
+                                    
+                        $(function() {
+                            function embed() {
+                                var emulator = $('#emulator');
+                                if(emulator) {
+                                    var flashvars = {
+                                        system : 'gba',
+                                        url : 'bin/roms/Legend of Zelda, The - The Minish Cap (USA).gba'
+                                    };
+                                var params = {};
+                                var attributes = {};
+                                params.allowscriptaccess = 'sameDomain';
+                                params.allowFullScreen = 'true';
+                                params.allowFullScreenInteractive = 'true';
+                                swfobject.embedSWF('bin/Nesbox.swf', 'emulator', '640', '480', '11.2.0', 'flash/expressInstall.swf', flashvars, params, attributes);
+			                 }
+                         }
+                         embed();
+                        });
+	
+                    </script>
+
+                </div>
+
+                
+
+            </div>
+        </section>
+
+        <section id="boxes">
+            <div class="containerGameplay">
+                
+
+                    <div class="boxGameplayControls">
+                        <h4>Controles:</h4>
+                        <p>A - "z"</p>
+                        <p>B - "x"</p>
+                        <p>Y - "a"</p>
+                        <p>X - "s"</p>
+                        <p>Up - "Arrow Up"</p>
+                        <p>Down - "Arrow Down"</p>
+                        <p>Left - "Arrow Left"</p>
+                        <p>Right - "Arrow Right"</p>
+                        <p>Start - "Enter"</p>
+                        <p>Select - "Space"</p>
+                        <p>L - q</p>
+                        <p>R - w</p>
+                    </div>
+
+                    <div class="boxGameplayInfo">
+                        <h4>Zelda: Minish Cap</h4>                         
+                        <p>Ano: 2004</p>
+                        <p>Avaliação: 4.7</p> 
+                        <p>Paltaforma: GBA</p>
+                        <p>Genêro: Plataforma</p>
+                        </div>
+
+                    
+                
+            </div>
+        </section>
+
+        <footer>
+            <p>Guillermo Benitez, Copyright &copy; 2019.</p>
+        </footer>
+        
+
+        
+
+
+
+    </body>
+
+
+
+
+
+
+</html>

@@ -1,0 +1,263 @@
+body {
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #bebebe;
+}
+
+/* Global */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.containerGameplay {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    border: 2px solid #e8491d;
+}
+
+.container2 {
+    width: 80%;
+    margin-bottom: 40px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.containerinfojogos {
+    width: 40%;
+    margin-bottom: 40px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+li {
+    padding: 0;
+    margin: 0;
+}
+
+.button_1 {
+
+    background-color: darkorchid;
+    height: 30px;
+    color: #bebebe;
+    font-weight: bold;
+    border: none;
+}
+
+/* Header */
+header {
+    background-color: darkorchid;
+    color: #bebebe;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+}
+
+header a{
+    color: #bebebe;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header li{
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+
+}
+
+header nav{
+    float: right;
+    margin-top: 20px;
+}
+
+header #logo{
+    float: left;
+}
+
+header #logo img{
+    margin: 0 0 20px 0;
+    max-width: 250px;
+    }
+
+header .current a {
+    color: #e8491d;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #cccccc;
+    font-weight: bold;
+}
+
+/* Showcase */
+
+#banner {
+    min-height: 400px;
+    background: url(../img/banner.jpg) -30px -250px;
+    text-align: center;
+
+}
+
+#banner h1{
+    margin-top: 100px;
+    margin-bottom: 10px;
+    font-size: 55px;
+}
+
+#banner a .button_1:hover{
+       background-color: #e8491d;
+       cursor: pointer;
+}
+
+/* Boxes */
+
+#boxes {
+    padding-top: 20px;
+}
+
+#boxes .box {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+}
+
+#boxes .box img{
+    height: 150px;
+}
+
+#boxes .box2 {
+    float: left;
+    width: 45%;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    border: 2px solid #e8491d; 
+}
+
+#boxes .box2:hover {
+    background: #e8491d;
+    cursor: pointer;
+ 
+}
+
+#boxes .box2 img{
+    height: 30%;
+}
+
+#boxes h2{
+    text-align: center;
+}
+
+#boxes a{
+    color:#000000;
+}
+
+#boxes .boxj {
+    float: left;
+    padding: 0px;
+    width: 93%;
+    margin: 10px;
+    text-align: center;
+    border: 2px solid #e8491d; 
+}
+
+#boxes .boxj img{
+    float: right;
+    text-align: center;
+    width: 50%;
+    max-height: 350;
+    margin: 0;
+    padding: 0;
+}
+
+#boxes .boxj h3{
+    margin: 0;
+}
+
+
+#boxes .search-box{
+    border-radius: 40px;
+    background-color: darkorchid;
+    max-width: 250px;
+    height: 40px;
+    position: absolute;
+    margin-bottom: 20px;
+}
+
+#boxes .search-box .search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: right;
+    padding: 0;
+    color: white;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0;
+}
+
+#boxes .search-box #inputFiltro::placeholder {
+    color: #bebebe;
+}
+
+#boxes .search-box .search-btn {
+    float: left;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    background: #e8491d;
+    align-items: center;
+}
+
+#boxes .search-box:hover > .search-txt {
+    width: 75%;
+}
+
+#boxes .boxj .infogame {
+    float: left;
+    padding: 10px;
+}
+
+#boxes .boxj .infogameplayer {
+    float: right;
+    padding: 10px;
+}
+
+#boxes .boxGameplayInfo {
+    float: right;
+    width: 35%;
+    padding: 10px 20px 10px 0px;
+    text-align: center;
+}
+
+#boxes .boxGameplayControls {
+    float: left;
+    width: 40%;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    background-color: darkorchid;
+    padding: 10px;
+    margin-top: 10px;
+}
+
